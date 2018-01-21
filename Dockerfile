@@ -7,3 +7,4 @@ RUN npm install
 COPY . /graph/app
 CMD ["nodemon", "app.js"]
 EXPOSE 4000
+VOLUME /graph/app
