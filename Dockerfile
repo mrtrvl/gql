@@ -1,4 +1,5 @@
 FROM node:latest
+RUN MKDIR /graph/app
 WORKDIR /graph/app
 RUN npm install nodemon -g
 COPY package.json /graph/app
