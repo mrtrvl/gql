@@ -14,7 +14,7 @@ const port = process.env.PORT;
 
 const { schema } = require('./schema/schema');
 
-const root = { africa: () => 'Hello Africa!' };
+const root = { africa: () => 'Hello Africa, tell me how You doing!' };
 
 app.use('/graphql', graphqlHTTP({
     schema: schema,
