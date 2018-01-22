@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon app.js"
+    "dev": "nodemon -L app.js"
   },
   "repository": {
     "type": "git",
@@ -21,7 +21,6 @@
     "dotenv": "^4.0.0",
     "express": "^4.16.2",
     "express-graphql": "^0.6.11",
-    "graphql": "^0.12.3",
-    "nodemon": "^1.14.11"
+    "graphql": "^0.12.3"
   }
 }

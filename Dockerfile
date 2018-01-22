@@ -1,11 +1,16 @@
 FROM node:latest
-RUN MKDIR /graph/app
-WORKDIR /graph/app
-RUN npm install nodemon -g
-COPY package.json /graph/app
-COPY package-lock.json /graph/app
+
+RUN mkdir /app
+
+WORKDIR /app
+
+RUN npm install -g nodemon
+
+COPY package.json /app/package.json
+COPY package-lock.json /app/package-lock.json
+
 RUN npm install
-COPY . /graph/app
-CMD ["nodemon", "app.js"]
+
 EXPOSE 4000
-VOLUME /graph/app
+
+VOLUME /app
