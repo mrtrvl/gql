@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
-let Schema = mongoose.Schema;
+const Place = require('./placesModel');
+const Schema = mongoose.Schema;
 
 const SensorSchema = new Schema ({
     name: {
@@ -14,8 +15,9 @@ const SensorSchema = new Schema ({
         type: Date,
         default: Date.now
     },
-    placeId: {
-        type: String,
+    place: {
+        type: Schema.Types.ObjectId,
+        ref: 'Place',
         required: 'Enter the place id'
     }
 });

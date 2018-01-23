@@ -1,10 +1,12 @@
 const mongoose = require('mongoose');
-let Schema = mongoose.Schema;
+const Sensor = require('./sensorsModel');
+const Schema = mongoose.Schema;
 
 const TemperatureSchema = new Schema ({
-    sensorId: {
-        type: String,
-        required: 'Enter the id of the sensor'
+    sensor: {
+        type: Schema.Types.ObjectId,
+        ref: 'Sensor',
+        required: 'Enter the sensor id'
     },
     temperature: {
         type: Number,
