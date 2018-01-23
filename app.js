@@ -6,15 +6,9 @@ const { buildSchema } = require('graphql');
 
 const port = process.env.PORT;
 
-/* const schema = buildSchema(`
-    type Query {
-        hello: String
-    }
-`); */
+const { schema } = require('./api/schema/schema');
 
-const { schema } = require('./schema/schema');
-
-const root = { africa: () => 'Hello Africa!!!' };
+const root = { africa: () => 'Hello Africa!' };
 
 app.use('/graphql', graphqlHTTP({
     schema: schema,
